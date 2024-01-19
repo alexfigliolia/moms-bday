@@ -21,8 +21,8 @@ export default [
     img: Holiday,
   },
   {
-    name: "Erica",
-    text: "",
+    name: "Mushy",
+    text: "Wishing you a beautiful day filled with endless love, happiness, pickleball and pizza. I love you more than anything! HAPPY BIRTHDAY!",
     img: Balcony,
   },
 ] as const;
