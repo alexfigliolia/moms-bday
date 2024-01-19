@@ -23,23 +23,16 @@ class PosterRenderer extends Component<Props, State> {
   }
 
   override render() {
-    const { p1, p2, imgSmall, imgLarge, active, url } = this.props;
+    const { text, img, active } = this.props;
     return (
       <div
         className={`poster ${active ? "active" : ""}`}
         style={{
-          "--background-small": `url(${imgSmall})`,
-          "--background-large": `url(${imgLarge})`,
+          "--inject-background": `url(${img})`,
         }}>
         <article>
           <Title letters={this.letters} length={this.length} />
-          <Content
-            p1={p1}
-            p2={p2}
-            url={url}
-            active={active}
-            delay={this.activeDelay}
-          />
+          <Content text={text} active={active} delay={this.activeDelay} />
         </article>
       </div>
     );
@@ -47,13 +40,10 @@ class PosterRenderer extends Component<Props, State> {
 }
 
 interface OwnProps {
-  p1: string;
-  p2: string;
-  url?: string;
+  img: string;
+  text: string;
   name: string;
   index: number;
-  imgSmall: string;
-  imgLarge: string;
 }
 
 interface Props extends OwnProps {
