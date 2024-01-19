@@ -1,6 +1,10 @@
 import { Screen } from "State/Screen";
 import BackgroundSmall from "Images/background-small.webp";
 import BackgroundLarge from "Images/background-large.webp";
+import Holiday from "Images/holiday.webp";
+import JenSteve from "Images/jen-steve.webp";
+import Outdoors from "Images/outdoors.webp";
+import Balcony from "Images/balcony.webp";
 
 export class Preloader {
   public static initialize() {
@@ -35,7 +39,19 @@ export class Preloader {
     return window.innerWidth >= 670 ? BackgroundLarge : BackgroundSmall;
   }
 
-  private static readonly smallImages = [];
+  private static readonly smallImages = [
+    BackgroundSmall,
+    Holiday,
+    JenSteve,
+    Outdoors,
+    Balcony,
+  ];
 
-  private static readonly largeImages = [];
+  private static readonly largeImages = [
+    BackgroundLarge,
+    Holiday,
+    JenSteve,
+    Outdoors,
+    Balcony,
+  ];
 }
